@@ -1,0 +1,33 @@
+//Program to reverse elements of the array 
+
+#include <stdio.h>
+#define SIZE 5 
+
+int main()
+{
+   int arr[5],i,temp;
+   printf("Enter the array values: ");
+   for(i=0; i<SIZE; i++)
+   {
+       scanf("%d",&arr[i]);
+   }
+   printf("Array elements:\n");
+   for(i=0; i<SIZE; i++)
+   {
+       printf("%d ",arr[i]);
+   }
+   for(i=0;i<SIZE/2;i++)
+   {
+       temp = arr[i];
+       arr[i] = arr[SIZE-i-1];
+       arr[SIZE-i-1] = temp;
+       
+   }
+   printf("\nArray elements after reversing:\n");
+   for(i=0; i<SIZE; i++)
+   {
+       printf("%d ",arr[i]);
+   }
+   
+   return 0;
+}

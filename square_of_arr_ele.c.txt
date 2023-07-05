@@ -1,0 +1,29 @@
+//Program to find the square of array elemnts
+
+#include <stdio.h>
+#define SIZE 5
+void square_arr_ele(int arr[]);
+
+int main()
+{
+   int arr[SIZE],i;
+   printf("Enter the array elements: ");
+   for(i=0; i<SIZE; i++)
+   {
+       scanf("%d",&arr[i]);
+   }
+   square_arr_ele(arr);
+   
+   return 0;
+}
+
+void square_arr_ele(int arr[])
+{
+    int i;
+  printf("Square of array elements: \n");
+  for(i=0; i<SIZE; i++)
+  {
+      arr[i] = arr[i] * arr[i];
+      printf("%d ",arr[i]);
+  }
+}

@@ -1,0 +1,25 @@
+//Program to convert decimal number to binary number
+
+#include <stdio.h>
+#define SIZE 20 
+
+int main()
+{
+   int arr[SIZE],i=0,j,num,temp;
+   printf("Enter the number: ");
+   scanf("%d",&num);
+   temp = num;
+   while(num > 0)
+   {
+       arr[i] = num % 2;
+       num = num / 2;
+       i++;
+   }
+   printf("Binary value of %d is : ",temp);
+   for(j=i-1; j>=0; j--)
+   {
+       printf("%d",arr[j]);
+   }
+   
+   return 0;
+}
